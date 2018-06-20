@@ -1,7 +1,9 @@
 # smart-blinds
 Blinds-opening robot that makes it easier to get up early
 
-
+# Dimension:
+dimension
+![ScreenShot](https://raw.github.com/Kamagawa/smart-blinds/master/docs/scans/dimensions.jpg)
 
 ## bluetooth pairing process:
 - look for bt adapter
@@ -23,6 +25,8 @@ mobile app:
 - automatically determine opening and closing times based on location
 
 # Electric Circuit Design
+![ScreenShot](https://raw.github.com/Kamagawa/smart-blinds/master/docs/scans/electrical.jpg)
+
 powering arduino - options:
 - barrel jack 7-12V regulated
 - vin 7-12V regulated
@@ -38,6 +42,9 @@ powering arduino - options:
 - cannot use arduino jack and vin to transfer 12V power since too much current
 - motor and motor controller will get power directly from source
 - parts to order: motor, motor bracket, screws, 12V adapter, protoboard
+
+![ScreenShot](https://raw.github.com/Kamagawa/smart-blinds/master/docs/scans/overlapping-wires.jpg)
+
 
 # App function
 - main
