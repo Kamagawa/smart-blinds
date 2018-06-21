@@ -56,11 +56,9 @@ Figure 1 Dimension of the Smart-Blind System
 # Components List (Cost)
 | Item        | Price        | Item     | Price    |
 |:-----------:|:-------------|:--------:|:---------|
-
 |arduino uno |$15 | sensor shield | $13 |
 |bluetooth module | $10 | motor controller | $14 |
 | motor | $19 | motor bracket | $10 | 
 | 12V adapter | $14 | protoboard | $0.30 |
-
 | acrylic board | | screws, standoffs, etc | | 
 | motor attachments | | | |
