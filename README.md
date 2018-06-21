@@ -1,28 +1,37 @@
 # smart-blinds
-Blinds-opening robot that makes it easier to get up early
+A blind that open closes at set time. 
 
-# Dimension:
-dimension
-![ScreenShot](https://raw.github.com/Kamagawa/smart-blinds/master/docs/scans/dimensions.jpg)
+![](docs/intro.jpg)
 
-## bluetooth pairing process:
-- look for bt adapter
-  - if no adapter, quit app
-- enable bt adapter
-- look for a paired smart blinds
-  - if none, take user to bluetooth pairing screen, then return to app
-- paired and ready to communicate
+Mechanical Design:
+![](docs/stepperdims.jpg)
+Figure 1 Dimension of the Smart-Blind System
 
-# Ideas
-mechanical design:
 - make the stepper motor's position adjustable
   - attach the motor to a flexible tube-like arm
 - reduce blinds cord slippage
   - by using a vertical holder
   - by cutting out a "circle" of holes, allowing the l-bracket to be mounted at a variey of angles
+  
+
+Parts: 
+| Tables        | CAD           | Picture  |
+| ------------- |:-------------:| -----:|
+| Arduino l298n | ![](cad/parts/arduino-l298n-1.snapshot.1/FOTO.JPG)     | ![](cad/parts/arduino-l298n-1.snapshot.1/l298n.png) |
+| Arduino uno4     | ![](cad/parts/arduino-uno-4.snapshot.3/ArduinoRender 2.png)     |   ![](ArduinoUnoR3Front.jpg)     |
+| Cord Gear | ![](cad/parts/cord gear/imgcord.png)     |    |
+| MotherBoard Scew | ![](cad/parts/motherboard-stand-standoff-screw-1.snapshot.1/m_standoff.PNG)     |  ![](cad/parts/motherboard-stand-standoff-screw-1.snapshot.1/m_standoff_size.PNG)   |
+| Nema stepper motor mounts| ![](cad/parts/nema-17-nema-23-stepper-motor-mounts-1.snapshot.4/NEMA23MotorMount.PNG) |  |
+|nema sepper motor mount| ![](cad/parts/nema-17-stepper-motor-13.snapshot.1/Nema 17 motor.JPG)||
+
 
 mobile app:
-- automatically determine opening and closing times based on location
+1. Automatically determine opening and closing times based on location
+2. Pair with the blind via bluetooth or wifi to set open or close time, and activate open or close action.
+
+
+
+
 
 # Electric Circuit Design
 ![ScreenShot](https://raw.github.com/Kamagawa/smart-blinds/master/docs/scans/electrical.jpg)
@@ -46,38 +55,7 @@ powering arduino - options:
 ![ScreenShot](https://raw.github.com/Kamagawa/smart-blinds/master/docs/scans/overlapping-wires.jpg)
 
 
-# App function
-- main
-  - on/off switch for timed blinds opening
-  - timed opening - two modes: 
-    - custom time: set custom times at which to set blinds to open and close positions from calibration
-    - [automatic: automatically open and close blinds based on your location's sunrise and sundown times]
-  - manual blinds control
-- sync
-  - 
-- calibrate
-  - manually set open and closed positions
-  
---------------------------------------------------------------------------------------------------------------------
 
-## activities: main, sync, calibrate
-- SharedPreferences for current mode and open/closing times and positions
-- could use PreferenceFragment for calibration screen settings
-- use onSharedPreferenceChangeListener to update UI after preference changes
-  - in onSharedPreferenceChangeListener of activity to be updated:
-    - implement on onSharedPreferenceChanged
-    - registerOnSharedPreferenceChangeListener
-    - unregisterOnSharedPreferenceChangeListener
-- alarmmanager for scheduled blinds adjustments
-
-- main activity: two options
-  - preferences activity with custom preference for blinds position adjustment, and custom preference for switch/time select
-  - regular activity:
-    - with linearlayout
-    - fragments for time and position controls, or a "compound component": https://developer.android.com/guide/topics/ui/custom-components.html
-    - and sharedpreferences.editor to update settings
-  
---------------------------------------------------------------------------------------------------------------------
 
 # Components List (Cost)
 - arduino uno: ~$15
