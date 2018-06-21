@@ -130,7 +130,7 @@ public class SmartBlindsControlActivity extends AppCompatPreferenceActivity {
                         // TODO 24 time format
                         String time = sharedPreferences.getString(key, "00:00");
 
-                        if (key == resources.getString(R.string.pref_key_auto_open_time)) {
+                        if (key.equals(resources.getString(R.string.pref_key_auto_open_time))) {
                             timePreference.setSummary("Automatically open blinds at " + time);
                         } else if (key == resources.getString(R.string.pref_key_auto_close_time)) {
                             timePreference.setSummary("Automatically close blinds at " + time);
